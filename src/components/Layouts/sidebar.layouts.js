@@ -168,7 +168,7 @@ const Sidebar = () => {
               href="https://github.com/SamPrinceFranklin/HireTraceAI"
               target="_blank"
               rel="noreferrer"
-            ></a>
+            >More Information</a>
           </div>
         </div>
       </div>
