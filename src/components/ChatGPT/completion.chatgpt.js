@@ -9,7 +9,7 @@ const Completion = () => {
   const [chatLog, setChatLog] = useState([
     {
       user: "gpt",
-      message: "How can I help you Today?",
+      message: "Hey Recruiter, Input your applicant's twitter content below...",
       avatar: "openai-dark.png",
     },
     // {
@@ -25,13 +25,21 @@ const Completion = () => {
   const openai = new OpenAIApi(configuration);
 
   const generateCompletion = async () => {
-    let chatLogNew = [...chatLog, { user: "me", message: prompt }];
+    let chatLogNew = [
+      ...chatLog,
+      {
+        user: 'me',
+        message:
+          'Analyse the following tweet and recommend whether he can be recruited and also suggest some roles that he can be assigned :' +
+          prompt,
+      },
+    ];
     setChatLog(chatLogNew);
     setPrompt("");
     setLoading(true);
     window.document.body.scrollIntoView({ behavior: "smooth", block: "end" });
     const res = await openai.createCompletion({
-      prompt: prompt,
+      prompt: "Analyse the following tweet and recommend whether he can be recruited and also suggest some roles that he can be assigned :" +prompt,
       model: "text-davinci-003",
       temperature: 0.9,
       max_tokens: 2048,
@@ -141,6 +149,7 @@ const Completion = () => {
             maxRows={5}
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
+
             //
             // |--------------------------------------------------------------------------
             // | NOTE: Give Comment on the two attributes below to enable input

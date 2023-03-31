@@ -5,36 +5,25 @@ import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
 const FAQ = () => {
   const lists = [
     {
-      question: "What can this website do?",
+      question: 'What can this website do?',
       li: false,
       answer:
-        "This website allows us to communicate with AI created by the OpenAI organization",
-      color: "#D0E2DB",
+        'This website can use artificial intelligence to analyze the tweets of job applicants and predict their suitability for hiring. It can help employers screen candidates based on their social media presence and personality traits. It can also provide feedback and suggestions to applicants on how to improve their online image and communication skills.',
+      color: '#D0E2DB',
     },
     {
-      question: "What can AI do on this website?",
-      li: true,
-      answer: [
-        { list_answer: "ChatGPT - Interacts with AI in a conversational way." },
-        {
-          list_answer:
-            "Dall·E 2 - Create original, realistic images and art from a text description",
-        },
-      ],
-      color: "#8BD3DD",
-    },
-    {
-      question: "What technology is used on this website?",
+      question: 'What can AI do on this website?',
       li: false,
-      answer: "This website is built using ReactJS, Tailwind CSS, OpenAI API",
-      color: "#FAAE2B",
+      answer:
+        'AI can perform natural language processing and sentiment analysis on the tweets of job applicants. It can also use machine learning algorithms to classify applicants into different categories based on their tweet content and tone. It can then generate a score and a report for each applicant that indicates their strengths and weaknesses, as well as their compatibility with the employer’s values and culture.',
+      color: '#8BD3DD',
     },
     {
-      question: "How to Get API Key?",
-      answer:
-        "You must first register on the openai website, then click the profile menu and select View API keys",
-      color: "#FE98A3",
-    },
+      question: 'What technology is used on this website?',
+      li: false,
+      answer: 'This website is built using ReactJS, Tailwind CSS, OpenAI API, Machine Learning, Artifical Intelligence, and Natural Language Processing.',
+      color: '#FAAE2B',
+    }
   ];
 
   return (

@@ -16,10 +16,10 @@ const Sidebar = () => {
   const [attention, setAttention] = useState(true);
   const menus = [
     { title: "Home", link: "/", icon: "faHouse" },
-    { title: "ChatGPT", link: "/chatgpt", icon: "faMessage" },
-    { title: "Dall·E", link: "/dall-e", icon: "faImages" },
+    { title: "Analyse A Peron's Tweet", link: "/chatgpt", icon: "faMessage" },
+    //{ title: "Dall·E", link: "/dall-e", icon: "faImages" },
     { title: "FAQs", link: "/question", icon: "faQuestionCircle" },
-    { title: "Demo", link: "/demo", icon: "faVideo" },
+   // { title: "Demo", link: "/demo", icon: "faVideo" },
   ];
 
   const handleIcon = (icon) => {
@@ -54,7 +54,7 @@ const Sidebar = () => {
   return (
     <div
       className={`${
-        open ? "w-44 md:w-72" : "w-12 md:w-16"
+        open ? 'w-44 md:w-72' : 'w-12 md:w-16'
       } border-r-2 border-black h-screen sticky top-0`}
     >
       <div className={`flex items-center`}>
@@ -62,7 +62,7 @@ const Sidebar = () => {
           src="openai-dark.png"
           alt="OpenAI Logo"
           className={`cursor-pointer duration-500 ${
-            open && "rotate-[360deg]"
+            open && 'rotate-[360deg]'
           } w-6 h-6 ml-3 mt-8 md:ml-4 md:mt-7 md:hover:rotate-[360deg]`}
           onClick={() => {
             setOpen(!open);
@@ -70,10 +70,10 @@ const Sidebar = () => {
         />
         <div
           className={`text-black origin-left font-medium text-2xl duration-200 ml-1.5 mt-8 md:mt-7 ${
-            !open && "scale-0"
+            !open && 'scale-0'
           }`}
         >
-          <h1 style={{ font: "charter" }}>OpenAI</h1>
+          <h1 style={{ font: 'charter' }}>HireTrace AI</h1>
         </div>
       </div>
       <ul className="pt-6">
@@ -81,7 +81,7 @@ const Sidebar = () => {
           <NavLink
             to={menu.link}
             style={({ isActive }) => ({
-              color: isActive ? "#000" : "#696969",
+              color: isActive ? '#000' : '#696969',
             })}
             key={index}
           >
@@ -95,7 +95,7 @@ const Sidebar = () => {
               />
               <span
                 className={`${
-                  !open && "scale-0"
+                  !open && 'scale-0'
                 } origin-left duration-200 md:text-lg`}
               >
                 {menu.title}
@@ -111,29 +111,29 @@ const Sidebar = () => {
         <FontAwesomeIcon
           icon={faInfoCircle}
           className={`text-base md:text-lg md:mr-6 text-black ${
-            open && "hidden"
-          } cursor-pointer ${!attention ? "hidden" : ""}`}
+            open && 'hidden'
+          } cursor-pointer ${!attention ? 'hidden' : ''}`}
           onClick={() => {
             setOpen(!open);
           }}
         />
         <div
-          className={`${open && "border-2 border-black"} ${
-            !open && "hidden"
-          } px-4 py-4 rounded-lg ${!attention ? "hidden" : ""}`}
-          style={{ boxShadow: "0.4rem 0.4rem 0 #222" }}
+          className={`${open && 'border-2 border-black'} ${
+            !open && 'hidden'
+          } px-4 py-4 rounded-lg ${!attention ? 'hidden' : ''}`}
+          style={{ boxShadow: '0.4rem 0.4rem 0 #222' }}
         >
-          <div className={`flex items-center mb-3 ${!open && "hidden"}`}>
+          <div className={`flex items-center mb-3 ${!open && 'hidden'}`}>
             <span
               className={`border-2 border-black bg-red-400 text-black text-xs md:text-sm font-semibold mr-2 px-2.5 py-0.5 rounded`}
-              style={{ boxShadow: "0.2rem 0.2rem 0 #222" }}
+              style={{ boxShadow: '0.2rem 0.2rem 0 #222' }}
             >
-              Attention
+              Developer Info
             </span>
             <button
               type="button"
               className="ml-auto -mx-1.5 -my-1.5 border-2 rounded-md border-black text-black focus:ring-2 focus:ring-gray-200 p-0.5 inline-flex h-6 w-6 hover:bg-red-400"
-              style={{ boxShadow: "0.2rem 0.2rem 0 #222" }}
+              style={{ boxShadow: '0.2rem 0.2rem 0 #222' }}
               data-collapse-toggle="dropdown-cta"
               aria-label="Close"
               onClick={() => {
@@ -156,10 +156,9 @@ const Sidebar = () => {
               </svg>
             </button>
           </div>
-          <div className={`${!open && "hidden"}`}>
+          <div className={`${!open && 'hidden'}`}>
             <p className={`mb-3 text-xs md:text-sm`}>
-              Please don't share any sensitive information in your
-              conversations.
+             This project is jointly developed by <b>Sam Prince Franklin, Glenn Emphraim, Rohan VL </b> for <b>Fundamentals of Human Resource Management</b> course at <b>VIT Chennai</b>.
             </p>
             <a
               className="text-xs md:text-sm underline"
