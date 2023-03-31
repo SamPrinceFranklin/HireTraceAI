@@ -158,16 +158,17 @@ const Sidebar = () => {
           </div>
           <div className={`${!open && 'hidden'}`}>
             <p className={`mb-3 text-xs md:text-sm`}>
-             This project is jointly developed by <b>Sam Prince Franklin, Glenn Emphraim, Rohan VL </b> for <b>Fundamentals of Human Resource Management</b> course at <b>VIT Chennai</b>.
+              This project is jointly developed by{' '}
+              <b>Sam Prince Franklin, Glenn Emphraim, Rohan VL </b> for{' '}
+              <b>Fundamentals of Human Resource Management</b> course at{' '}
+              <b>VIT Chennai</b>.
             </p>
             <a
               className="text-xs md:text-sm underline"
-              href="https://openai.com/blog/chatgpt/"
+              href="https://github.com/SamPrinceFranklin/HireTraceAI"
               target="_blank"
               rel="noreferrer"
-            >
-              More information
-            </a>
+            ></a>
           </div>
         </div>
       </div>
