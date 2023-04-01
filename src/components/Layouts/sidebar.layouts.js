@@ -159,7 +159,7 @@ const Sidebar = () => {
           <div className={`${!open && 'hidden'}`}>
             <p className={`mb-3 text-xs md:text-sm`}>
               This project is jointly developed by{' '}
-              <b>Sam Prince Franklin, Glenn Emphraim, Rohan VL </b> for{' '}
+              <b>Sam Prince Franklin, Glenn Emphraim, Roshan VL </b> for{' '}
               <b>Fundamentals of Human Resource Management</b> course at{' '}
               <b>VIT Chennai</b>.
             </p>
